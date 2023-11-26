@@ -3,7 +3,7 @@ LABEL  MAINTAINER="soulteary <soulteary@gmail.com>"
 
 ENV LIBRARY_PATH /lib:/usr/lib
 
-RUN wget https://github.com/soulteary/gitbook2pdf/archive/master.zip -O /tmp/app.zip && \
+RUN wget https://github.com/p1kachuu/docker-gitbook-pdf-generator/releases/download/new/gitbook2pdf-master.zip -O /tmp/app.zip && \
     cd /tmp && unzip app.zip && mv /tmp/gitbook2pdf-master /app
 
 RUN cat /etc/apk/repositories | sed -e "s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/" | tee /etc/apk/repositories && \
